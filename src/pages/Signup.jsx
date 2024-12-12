@@ -2,7 +2,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import { getFirestore, doc, setDoc, getDocs, collection, addDoc } from "firebase/firestore";
+import { getFirestore, getDocs, collection, addDoc ,query, where } from "firebase/firestore";
 import app from '../../Backend/firestore';
 import Navbar from '../components/Navbar';
 
@@ -21,6 +21,28 @@ const Signup = () => {
         setpassword(e.target.value)
         console.log(password)
     }
+    const getUserDataByEmail = async (email) => {
+        try {
+          const usersRef = collection(db, "Signup");
+          console.log(usersRef)
+          const q = query(usersRef, where("email", "==", email));
+    
+          const querySelector = await getDocs(q);
+    
+          if (!querySelector.empty) {
+    
+            const userDoc = querySelector.docs[0];
+            console.log(userDoc.data());
+            return userDoc.data();
+          } else {
+            return null;
+          }
+        } catch (error) {
+          console.error("Error getting user data:", error);
+          return null;
+        }
+      };
+    
 
     const handleAdd = async () => {
         try {
@@ -28,13 +50,15 @@ const Signup = () => {
             if (!email || !password) {
                 alert("Fill all the fields")
                 return;
-            } else {
+            } else if(!getUserDataByEmail(email).empty) {
+                alert("user already exist")
+
+            }else{
                 const id = uuidv4();
                 const newForm = { id, email, password };
 
                 const docRef = await addDoc(collection(db, "Signup"), newForm); // "forms" is your Firestore collection name
                 console.log("Document written with ID: ", docRef.id);
-
             }
 
 
