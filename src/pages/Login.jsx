@@ -98,7 +98,7 @@ const Login = () => {
 
           <div className='flex w-[100%] items-center justify-end px-5 gap-1'>
             <p className='text-xs items-end'>New User?</p>
-            <Link to='/signup' className='text-xs text-blue-800'><a href="#">SignUp</a></Link>
+            <Link to='/signup' className='text-xs text-blue-800'>SignUp</Link>
           </div>
         </div>
 

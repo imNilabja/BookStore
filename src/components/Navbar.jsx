@@ -1,15 +1,18 @@
 /* eslint-disable no-unused-vars */
 
 import React from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
 
 const Navbar = () => {
-    const status = localStorage.getItem('login');
+    const [status, setstatus] = useState(localStorage.getItem('login') === 'true')
+
     console.log(status)
-    const handleLogout=() => {
-        localStorage.setItem("login",false)
+    const handleLogout = () => {
+        localStorage.setItem("login", false)
+        setstatus('false')
 
         alert("logged out")
     }
@@ -20,32 +23,35 @@ const Navbar = () => {
                     <Link to="/">LOREM</Link>
                 </div>
 
-                {/* <div className='flex items-center  justify-center'>
-                    <input type='text' className='w-[600px] h-7 rounded-md' ></input>
-                    <button><img width={26} src="/search.png" className='mx-2' /></button>
-                </div> */}
-                <div className='flex w-[25%] login.gif justify-around items-center mr-9'>
-                    {!status && (
-                        <>
-                            <Link to="/login"><button className='flex items-center text-white font-extrabold '>Login</button></Link>
-                            <Link to="/signup"> <button className='flex items-center text-white font-extrabold '>Sign Up</button></Link>
-                        </>
 
-                    )
-                    }
+                {!status ? (
+                    <>
+                        <div className='flex w-[10%] justify-around items-center mr-9'>
+                        <Link to="/login"><button className='flex items-center text-white font-extrabold '>Login</button></Link>
+                        <Link to="/signup"> <button className='flex items-center text-white font-extrabold '>Sign Up</button></Link>
+                        </div>
+                        
+                    </>
 
-                    {status && (
-                        <>
-                            <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold '>Dashboard</button></Link>
-                            <Link to="/about"> <button className='flex items-center text-white font-extrabold '>About</button></Link>
-                            <Link to="/career"> <button className='flex items-center text-white font-extrabold '>Career</button></Link>
-                            <Link to="/contact"> <button className='flex items-center text-white font-extrabold '>Contact</button></Link>
+                ) : (
+                    <>
+                        <div className='flex w-[25%] justify-around items-center mr-9'>
+                        <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold '>Dashboard</button></Link>
+                        <Link to="/about"> <button className='flex items-center text-white font-extrabold '>About</button></Link>
+                        <Link to="/career"> <button className='flex items-center text-white font-extrabold '>Career</button></Link>
+                        <Link to="/contact"> <button className='flex items-center text-white font-extrabold '>Contact</button></Link>
                         <button className='flex items-center text-white font-extrabold ' onClick={handleLogout}>Logout</button>
-                        </>
-                    )}
+                        </div>
+
+                      
+                    </>
+                )
+                }
 
 
-                </div>
+
+
+
 
             </nav>
         </>
