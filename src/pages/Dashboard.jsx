@@ -13,12 +13,13 @@ const Dashboard = () => {
       {status ? (
         <>
           <p className='text-2xl font-bold'>
-            Login to Access!
+          you have Access!
           </p></>
       ) : (
         <>
           <p className='text-2xl font-bold'>
-            you have Access!
+            
+            Login to Access!
           </p></>
       )}
     </>
