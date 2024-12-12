@@ -6,7 +6,7 @@ import { getFirestore, collection, getDocs, query, where, addDoc } from "firebas
 
 import app from '../../Backend/firestore';
 import Navbar from '../components/Navbar';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -66,10 +66,10 @@ const Login = () => {
     }
 
     if (storedUserData.password === password) {
-  
+
       console.log("Login successful!");
       alert("Login successful!");
-      localStorage.setItem("login",true)
+      localStorage.setItem("login", true)
 
     } else {
       alert("Incorrect password.");
@@ -79,10 +79,10 @@ const Login = () => {
 
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div className="w-full h-screen bg-gray-800 flex items-center justify-center">
-        
-        <div className='w-[350px] h-[500px] bg-green-400 rounded-md flex flex-col items-center gap-5 p-2'>
+
+        <div className='w-[350px] h-[400px] bg-green-400 rounded-md flex flex-col items-center gap-5 p-2'>
 
           <p className='font-bold text-2xl my-3'>Login</p>
           <div className='w-[100%] h-10 flex justify-center items-center gap-3'>
@@ -96,7 +96,10 @@ const Login = () => {
           </div>
           <button onClick={handleLogin} className='border border-black rounded-md px-4 py-1 mt-5 font-bold bg-yellow-300'>Login</button>
 
-
+          <div className='flex w-[100%] items-center justify-end px-5 gap-1'>
+            <p className='text-xs items-end'>New User?</p>
+            <Link to='/signup' className='text-xs text-blue-800'><a href="#">SignUp</a></Link>
+          </div>
         </div>
 
 

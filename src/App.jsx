@@ -17,17 +17,18 @@ function App() {
     <>
       <Router>
         <Routes>
+
+          
           <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-
-
 
           {/* PROTECTED ROUTE */}
           <Route element={<ProtectedRoute />}>
             <Route path="/career" element={<Career />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Route>
 
         </Routes>
