@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 
 import { getFirestore, collection, getDocs, query, where, addDoc } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
+
 import app from '../../Backend/firestore';
 import Navbar from '../components/Navbar';
 
