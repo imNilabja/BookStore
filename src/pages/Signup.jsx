@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { getFirestore, doc, setDoc, getDocs, collection, addDoc } from "firebase/firestore";
 import app from '../../Backend/firestore';
+import Navbar from '../components/Navbar';
 
 const db = getFirestore(app);
 
@@ -45,6 +46,7 @@ const Signup = () => {
 
     return (
         <>
+        <Navbar/>
             <div className="w-full h-screen bg-gray-800 flex items-center justify-center">
                 <div className='w-[350px] h-[500px] bg-green-400 rounded-md flex flex-col items-center gap-5 p-2'>
 
