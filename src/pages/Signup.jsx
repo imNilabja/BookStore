@@ -72,7 +72,7 @@ const Signup = () => {
         <>
             <Navbar />
             <div className="w-full h-screen bg-gray-800 flex items-center justify-center">
-                <div className='w-[350px] h-[400px] bg-green-400 rounded-md flex flex-col items-center gap-5 p-2'>
+                <div className='w-[350px] h-[400px] bg-green-400 rounded-md flex flex-col items-center gap-5 p-2 mx-2'>
 
                     <p className='font-bold text-2xl my-3'>Sign Up</p>
                     <div className='w-[100%] h-10 flex justify-center items-center gap-3'>
