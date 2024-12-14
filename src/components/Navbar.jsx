@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <>
             <div className='w-[100%] min-h-14 bg-green-600 mx-auto flex justify-between'>
-                <div className=' flex items-center text-white justify-center w-[20%] font-extrabold text-xl'>
+                <div className=' flex items-center text-white justify-center w-[20%] font-extrabold text-sm xs:text-xl'>
                     <Link to="/">LOREM</Link>
                 </div>
 
