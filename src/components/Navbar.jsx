@@ -36,11 +36,11 @@ const Navbar = () => {
 
                 ) : (
                     <>
-                        <div className='ml-2 flex w-[55%] gap-4 justify-end items-center mr-9 flex-wrap text-md xs:text-xl' >
-                            <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold text-md xs:text-xl'>Dashboard</button></Link>
-                            <Link to="/about"> <button className='flex items-center text-white font-extrabold text-md xs:text-xl'>About</button></Link>
-                            <Link to="/career"> <button className='flex items-center text-white font-extrabold text-md xs:text-xl'>Career</button></Link>
-                            <Link to="/contact"> <button className='flex items-center text-white font-extrabold text-md xs:text-xl'>Contact</button></Link>
+                        <div className='ml-2 flex w-[55%] gap-4 justify-end items-center mr-9 flex-wrap text-sm xs:text-xl' >
+                            <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Dashboard</button></Link>
+                            <Link to="/about"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>About</button></Link>
+                            <Link to="/career"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Career</button></Link>
+                            <Link to="/contact"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Contact</button></Link>
                             <button className='flex items-center text-white font-extrabold ' onClick={handleLogout}>Logout</button>
                         </div>
 
