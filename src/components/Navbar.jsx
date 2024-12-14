@@ -27,7 +27,7 @@ const Navbar = () => {
 
                 {!status ? (
                     <>
-                        <div className='ml-2 flex w-[25%] gap-3 justify-end items-center mr-9 flex-wrap py-2 '>
+                        <div className='ml-2 flex w-[25%] gap-4 justify-end items-center mr-4 flex-wrap py-2 '>
                             <Link to="/login"><button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Login</button></Link>
                             <Link to="/signup"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Sign Up</button></Link>
                         </div>
@@ -36,7 +36,7 @@ const Navbar = () => {
 
                 ) : (
                     <>
-                        <div className='ml-2 flex w-[55%] xs:gap-5 gap-2 justify-end items-center mr-9 flex-wrap py-1' >
+                        <div className='ml-2 flex w-[55%] xs:gap-5 gap-2 justify-end items-center mr-3 flex-wrap py-1' >
                             <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Dashboard</button></Link>
                             <Link to="/about"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>About</button></Link>
                             <Link to="/career"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Career</button></Link>
