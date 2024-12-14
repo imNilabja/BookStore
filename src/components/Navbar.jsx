@@ -28,8 +28,8 @@ const Navbar = () => {
                 {!status ? (
                     <>
                         <div className='ml-2 flex w-[25%] gap-3 justify-end items-center mr-9 flex-wrap py-2 '>
-                            <Link to="/login"><button className='flex items-center text-white font-extrabold '>Login</button></Link>
-                            <Link to="/signup"> <button className='flex items-center text-white font-extrabold '>Sign Up</button></Link>
+                            <Link to="/login"><button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Login</button></Link>
+                            <Link to="/signup"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Sign Up</button></Link>
                         </div>
 
                     </>
