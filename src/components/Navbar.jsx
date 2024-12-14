@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <>
             <div className='w-[100%] min-h-14 bg-green-600 mx-auto flex justify-between'>
-                <div className=' flex items-center text-white justify-center w-[20%] font-extrabold text-sm xs:text-xl ml-3 xs:m-0'>
+                <div className=' flex items-center text-yellow-400 justify-center w-[20%] font-extrabold text-sm xs:text-xl ml-3 xs:m-0'>
                     <Link to="/">Goswami Books</Link>
                 </div>
 
@@ -36,12 +36,12 @@ const Navbar = () => {
 
                 ) : (
                     <>
-                        <div className='ml-2 flex w-[55%] gap-4 justify-end items-center mr-9 flex-wrap py-1' >
+                        <div className='ml-2 flex w-[55%] gap-5 justify-end items-center mr-9 flex-wrap py-1' >
                             <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Dashboard</button></Link>
                             <Link to="/about"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>About</button></Link>
                             <Link to="/career"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Career</button></Link>
                             <Link to="/contact"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Contact</button></Link>
-                            <button className='flex items-center text-white font-extrabold ' onClick={handleLogout}>Logout</button>
+                            <button className='flex items-center text-orange-500 font-extrabold text-sm xs:text-xl' onClick={handleLogout}>Logout</button>
                         </div>
 
 
