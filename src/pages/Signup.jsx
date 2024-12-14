@@ -21,6 +21,7 @@ const Signup = () => {
         setpassword(e.target.value)
         console.log(password)
     }
+    
     const userExistCheck = async (email) => {
         try {
             const usersRef = collection(db, "Signup");
@@ -46,18 +47,23 @@ const Signup = () => {
 
     const handleAdd = async () => {
         try {
-
             if (!email || !password) {
                 alert("Fill all the fields")
                 return;
-            } else if (!userExistCheck(email).empty) {
+            }
+
+            const user = await userExistCheck(email);
+
+            if (user) {
                 alert("user already exist")
 
             } else {
                 const id = uuidv4();
                 const newForm = { id, email, password };
 
-                const docRef = await addDoc(collection(db, "Signup"), newForm); // "forms" is your Firestore collection name
+                const docRef = await addDoc(collection(db, "Signup"), newForm);
+                alert("Signed up")
+
                 console.log("Document written with ID: ", docRef.id);
             }
 
