@@ -36,7 +36,7 @@ const Navbar = () => {
 
                 ) : (
                     <>
-                        <div className='ml-2 flex w-[55%] gap-4 justify-end items-center mr-9 flex-wrap text-sm xs:text-xl' >
+                        <div className='ml-2 flex w-[55%] gap-4 justify-end items-center mr-9 flex-wrap py-1' >
                             <Link to="/dashboard"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Dashboard</button></Link>
                             <Link to="/about"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>About</button></Link>
                             <Link to="/career"> <button className='flex items-center text-white font-extrabold text-sm xs:text-xl'>Career</button></Link>
