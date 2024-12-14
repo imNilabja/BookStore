@@ -6,7 +6,7 @@ import { getFirestore, collection, getDocs, query, where, addDoc } from "firebas
 
 import app from '../../Backend/firestore';
 import Navbar from '../components/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 
 
@@ -50,7 +50,7 @@ const Login = () => {
     }
   };
 
-
+  const navigate = useNavigate();
   const handleLogin = async () => {
     if (!email || !password) {
       alert("Please fill in both email and password.");
@@ -68,8 +68,10 @@ const Login = () => {
     if (storedUserData.password === password) {
 
       console.log("Login successful!");
-      alert("Login successful!");
+      //alert("Login successful!");
+      
       localStorage.setItem("login", true)
+      navigate("/dashboard")
 
     } else {
       alert("Incorrect password.");
