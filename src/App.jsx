@@ -9,6 +9,7 @@ import About from './pages/About';
 import Career from './pages/Career';
 import Contact from './pages/Contact';
 import ProtectedRoute from './components/ProtectedRoute';
+import BookDetails from './components/BookDetails';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/book" element={<About />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/book1" element={<BookDetails />} />
 
           </Route>
 
