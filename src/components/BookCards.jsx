@@ -14,15 +14,15 @@ const BookCards = ({ link, name, price }) => {
                 <button>
 
 
-                    <div className='w-[220px] h-[350px] border border-black rounded-md flex-col items-center justify-center'>
-                        <div className=" w-[95%] h-[175px] my-auto mx-auto p-1">
+                    <div className='w-[250px] h-[550px] border border-black rounded-lg flex-col items-center justify-center pt-2'>
+                        <div className=" w-[95%] h-[350px] my-auto mx-auto p-1 ">
 
                             <img src={link} alt="" className='rounded-md' />
 
                         </div>
                         <div className=" w-[95%] h-[175px] my-auto mx-auto p-2 flex-col justify-center items-center font-bold">
-                            <p>{name}</p>
-                            <p>Price:{price}/-</p>
+                            <p className=' p-3'>{name}</p>
+                            <p>Price: {price}/-</p>
 
 
                         </div>
