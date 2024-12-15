@@ -6,12 +6,13 @@ import { getFirestore, getDocs, collection, addDoc, query, where } from "firebas
 import app from '../../Backend/firestore';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const db = getFirestore(app);
 
 const Signup = () => {
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
-
+    const navigate=useNavigate();
     const emailHandler = (e) => {
         setemail(e.target.value)
         console.log(email)
@@ -63,6 +64,7 @@ const Signup = () => {
 
                 const docRef = await addDoc(collection(db, "Signup"), newForm);
                 alert("Signed up")
+                navigate("/login")
 
                 console.log("Document written with ID: ", docRef.id);
             }
@@ -73,6 +75,7 @@ const Signup = () => {
             console.error("Error adding document: ", error);
         }
     };
+  
 
     return (
         <>
