@@ -19,7 +19,7 @@ const BookDetails = () => {
                     <img src={image1} alt={name} className='rounded-md' width={530} />
                     <img src={image2} alt={name} className='rounded-md' width={530} />
                 </div>
-                <div className='flex-col my-8 w-[90%] gap-10'>
+                <div className='flex flex-col my-8 w-[90%] gap-6'>
                     <p className='text-4xl font-bold'>{name}</p>
                     <p className='text-2xl font-bold'>Price: {price}/-</p>
 
